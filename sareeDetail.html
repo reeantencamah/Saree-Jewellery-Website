@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Kanjivaram Saree</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../style2.css">
+	
+	
+	<style>
+		a:link {color: navy;}
+		a:active {color: lightblue;}
+		a:hover {color: teal ;}
+		a:link {text-decoration: none;}
+
+	</style>
+
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+
+</head>
+<body>
+	<div class="header">
+	 <form class="search">
+	 <img src="../images/home/home.png" width="25px" height="25px"> <a href="../Home.html"align="left" >Home |</a>
+		<input type="text" name="search" placeholder="Search.." size="13" >  <a href="login.html">  | <img src="../images/home/login.png" width="20px" height="20px"> Login |</a> <img src="../images/home/cart.png" width="20px" height="20px"><a href=""> Cart </a>
+	</form>	
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href ="categories.html">Saree</a>
+				<ul>
+					<li><a>Wedding Wear</a></li>
+					<li><a>Bridal Wear</a></li>
+					<li><a>Festive Wear</a></li>
+					<li><a>Casual Wear</a></li>
+				</ul>
+			</li>
+			<li><a  href ="Jewellery.html">Jewellery</a>
+				<ul>
+					<li><a>Earrings</a></li>
+					<li><a>Necklaces</a></li>
+					<li><a>Bangles & Sets</a></li>
+					<li><a>Rings</a></li>
+					<li><a>Anklets</a></li>
+				</ul>
+			</li>
+			<li><a>Discover</a>
+				<ul>
+					<li><a>New Arrival</a></li>
+					<li><a>Bestsellers</a></li>
+					<li><a>Summer Trends</a></li>
+				</ul/
+			</li>
+		</ul>
+	</div>
+	
+    <div class="viewcolumn1">
+		<div class="smallpicture">
+			<img  onclick = "change_img(this)" src="../images/kanjivaram/k1.0.jpg" width="100px" height="125px">
+			<img onclick = "change_img(this)" src="../images/kanjivaram/k1.1.jpg" width="100px" height="125px">
+			<img onclick = "change_img(this)" src="../images/kanjivaram/k1.2.jpg" width="100px" height="125px">
+		</div>
+       
+    </div>
+	
+   <div class="viewcolumn2">
+<div class="img-zoom-container">
+	 
+  <img id="myimage" src="../images/kanjivaram/k1.0.jpg"  width="350px" height="500px">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+
+   <script type = "text/javascript">
+		var container = document.getElementById("myimage");
+		function change_img(image) {
+			container.src = image.src;
+		}
+	</script>
+   
+   
+	
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+     <div class="descriptionk">
+            <h2>Vi Silk Saree</h2>
+			<p>No cost. No hassles. All elegance.</p>
+            <h5>Prodcut code: K123</h5>
+            <hr>
+            
+           
+            <h2>Offer Price</h2>
+            <div class = "price">
+                <table>
+                    <tr>
+                        <td><h4 class="oldprice"><del>Rs 2000</del><sup><i>50% Off</i></sup></h4> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><h4 class="Newprice">Rs 1000 + <abbr>99 shipping</abbr></h4>  </td>
+                        
+                    </tr>
+                </table>
+              
+                
+                
+            </div>
+            <hr>
+            <h2>Details:</h2>
+           
+            <table>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Blouse Piece: Semi-stitched</li>
+                            <li>Wash Care: Hand/machine wash</li>
+                        </ul>
+                    </td>
+                    
+                      <td>
+                        <ul>
+                            <li>Saree Color: Blue</li>
+                            <li>Blouse Piece Fabric: Silk</li>
+                        </ul>
+                    </td>
+                      <td><button onclick="myFunction()" id="myButton"><b>Read more</b></button></td>
+                </tr>
+            </table>
+            
+            <span id="dots"></span><span id="more"><p>Kanjivaram silk saree for women</p>
+<p><b>General:</b></p>
+<p>Color and Texture may have slight variation. This happens because of photography.
+Dry Clean only, Cold Wash recommended.</p>
+<br>
+<p><b>Fall and Edging</b></p>
+			No Saree is complete without the Fall and Edging (Pico Border) work, as they add to its flow, grace and longevity. The Edging is done on both ends of the Saree, as it helps in giving a smooth edge to the drape and protects it from frayed edges</span></p>
+            <hr>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myButton");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+            <button class="buybutton"><a href="#" class="cart">Add to wish List</a></button>
+            
+            
+            <button class="buybutton" onclick ="openForm()">Buy Now</button>
+            
+
+            <div class="form-popup" id="myForm">
+                <form class="form-container">
+     
+        
+		  <fieldset>
+			   <legend>Details</legend>
+			 
+			   <label for="LastName"><b>Last Name:</b></label>
+               <input type="text" placeholder="Enter Last Name" name="Last Name" required><br>
+			   <label for="FirstName"><b>First Name:</b></label>
+               <input type="text" placeholder="Enter First Name" name="First Name" required><br>
+               <label for="address"><b>Address:</b></label>
+               <input type="text" placeholder="Enter Address" name="address" required>
+		  </fieldset>
+		  
+		 <table>
+		  <tr>
+			   <td>
+					<fieldset>
+						 <legend>Payment</legend>
+                 
+							  <h4>Price: Rs 1000</h4>   
+                      
+
+							  <h4>Shipping: Rs 99</h4>  
+                          
+                        
+							  <h3>Total:<b> Rs 1099</b></h3>
+			   </td>
+		  
+		  <td>
+		  
+			   <table>
+					<tr>
+						 
+						 <td><input type="radio" name="Paypal" value="Festive"> Juice</td>
+						 <td><img src="../images/payment/juice.jpg" width = "75px" height = "40px"></td>
+						
+					</tr>
+					
+					<tr>
+						 <td><input type="radio" name="Paypal" value="Festive"> Paypal</td>
+						 <td><img src="../images/payment/paypal.png" width = "75px" height = "50px"></td>
+					</tr>
+				
+					<tr>
+						 <td><input type="radio" name="Paypal" value="Festive"> Internet-Banking</td>
+						 <td><img src="../images/payment/internetbanking.jpg" width = "75px" height = "50px"></td>
+					</tr>
+			   </table>
+			   </td>
+		  </tr>
+                   </table>
+                 
+            </fieldset>
+            <button type="submit" class="btn" onclick ="openForm()">Buy</button>
+               
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+          
+            <button class="buybutton"><a href="#" class="cart">Add to Shpping Cart</a></button>
+
+<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+            
+            <hr>
+            <p><b>warranty : </b>5 days seller replacement warranty against manufacturing defects.</p>
+            <p><b>Shipping:</b> dispatched withing 2-3 working days.</p>
+        </div>
+		
+			
+    </div>
+	
+	
+
+</body>
+</html>

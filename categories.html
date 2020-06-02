@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Saree</title>
+    	<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="stylesheet" type="text/css" href="../style2.css">
+	<style>
+		a:link {color: navy;}
+		a:active {color: lightblue;}
+		a:hover {color: teal ;}
+		a:link {text-decoration: none;}
+
+	</style>
+</head>
+
+<body>
+    <div class="header">
+	 <form class="search">
+	 <img src="../images/home/home.png" width="25px" height="25px"> <a href="../Home.html"align="left" >Home |</a>
+		<input type="text" name="search" placeholder="Search.." size="13" >  <a href="login.html">  | <img src="../images/home/login.png" width="20px" height="20px"> Login |</a> <img src="../images/home/cart.png" width="20px" height="20px"><a href=""> Cart </a>
+	</form>	
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href ="categories.html">Saree</a>
+				<ul>
+					<li><a>Wedding Wear</a></li>
+					<li><a>Bridal Wear</a></li>
+					<li><a>Festive Wear</a></li>
+					<li><a>Casual Wear</a></li>
+				</ul>
+			<li><a href ="Jewellery.html">Jewellery</a>
+				<ul>
+					<li><a>Earrings</a></li>
+					<li><a>Necklaces</a></li>
+					<li><a>Bangles & Sets</a></li>
+					<li><a>Rings</a></li>
+					<li><a>Anklets</a></li>
+				</ul>
+			</li>
+			<li><a>Discover</a>
+				<ul>
+					<li><a>New Arrival</a></li>
+					<li><a>Bestsellers</a></li>
+					<li><a>Summer Trends</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+    <div class="column1">
+        <center>  
+        <div class= "Type">
+        
+            <h2>Shop By</h2>
+            <hr>
+         
+			
+			<button class="accordion">Type</button>
+			<div class="panel">
+				<table>
+					<tr>
+						<td><input type="radio" onchange="window.location.replace('silk.html')"> Silk Saree</td>
+					</tr>
+                
+					 <tr>
+						<td><input type="radio" name="type" value="Embroided"> Embroided</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Sarees"> Printed Sarees</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Chiffon"> Chiffon</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Cotton"> Cotton</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Rajasthani"> Rajasthani</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Stone Work"> Stone Style Sarees</td>
+					</tr>
+            
+				</table>
+		
+			</div>	
+			<hr> 
+			<button class="accordion">Occasion</button>
+			<div class="panel">
+				<table >
+					<tr>
+						<td><input type="radio" name="Occasion" value="Wedding"> Wedding Wear</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Bridal"> Bridal  Wear</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Festive"> Festive Wear</td>
+					</tr>
+						<td><input type="radio" name="Occasion" value="Casual"> Casual Wear</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Party"> Party Sarees</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Traditional "> Traditional</td>
+					</tr>
+				</table>
+			</div>
+		<hr>
+		<button class="accordion">Color</button>
+			<div class="panel">
+				<table >
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Red</td>
+						
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Blue</td>
+						
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Green</td>
+					</tr>
+						<td><input type="checkbox" name="color" value=""> Violet</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Yellow</td>
+						
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=" "> Orange</td>
+					</tr>
+				</table>
+			</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+            <hr>
+         
+            <h4>Price</h4>
+            <label for ="price range">
+            Slide till appropriate price
+            
+            </label>
+            <br>
+            <br>
+             Low<input type ="range" name="price range" id = "price range" min="0" max="100">High
+       
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        
+        </div>
+        </center> 
+    </div>
+    <div class="column2">
+		<div class="heading">
+                    <h2>Sarees Collections</h2>
+                    <p>Everything that's completes the Beauty of a woman</p>
+					<h4>Design, style and pattern would be at the peak of your beauty once you dresses these Sarees. </h4>
+        
+		<div id="myBtnContainer">
+			<button style="float: left;margin-left:60px; margin-top: 0px;" class="btn active" onclick="filterSelection('all')"> All</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('new Arrivals')"> New Arrivals</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Best Sellers')"> Best Sellers</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Most Viewed')"> Most Viewed</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Price:Low to High')"> Price:Low to High</button>
+		</div>
+		</div>
+		<div class="product">
+		<!-- Saree Gallery Grid -->
+			
+				<div class="column new Arrivals">
+					<div class="items">
+						<a href="rajesthan1.0.html" class="img"><img src="../images/kanjivaram/k1.0.jpg"></a>
+                        <a href="#" class="name">Pure Silk Saree</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+						<span>New</span>
+					</div>
+				</div>
+				
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="Kanjivaram.html" class="img"><img src="../images/silk/silk1.1.jpg"></a>
+                        <a href="#" class="name">Dot Kanjivaram Designs </a>
+                        <div>Rs 1500</div>
+                        <a href="#" class="cart">Add to cart</a>
+                       	
+					</div>
+				</div>
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/chiffon/chiffon1.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 750</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+  
+			    <div class="column new Arrivals">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/Rajesthani/r1.0.jpg"></a>
+                        <a href="#" class="name">Rajasthani Style</a>
+                        <div>Rs 1100</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        <span>New</span>
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/cotton/c1.0.jpg"></a>
+                        <a href="#" class="name">PerfectBlue Cotton Silk</a>
+                        <div>Rs 900</div>
+                        <a href="#" class="cart">Add to cart</a>
+                       
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/silk/silk1.2.1.jpg"></a>
+                        <a href="#" class="name">Saree1</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/Rajesthani/r1.1.jpg"></a>
+                        <a href="#" class="name">Saree1</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/silk/silk1.1.jpg"></a>
+                        <a href="#" class="name">Saree1</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column new Arrivals">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/chiffon/chiffon1.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 750</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/cotton/c1.2.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 1250</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/chiffon/chiffon1.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 1650</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/silk/silk1.2.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 2250</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+
+				
+<!-- END GRID -->
+			
+		</div>
+	</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+ </body>
+</html>

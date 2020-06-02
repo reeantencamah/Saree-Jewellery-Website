@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Jewellery</title>
+    	<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="stylesheet" type="text/css" href="../style2.css">
+	<style>
+		a:link {color: navy;}
+		a:active {color: lightblue;}
+		a:hover {color: teal ;}
+		a:link {text-decoration: none;}
+
+	</style>
+</head>
+
+<body>
+    <div class="header">
+	 <form class="search">
+	 <img src="../images/home/home.png" width="25px" height="25px"> <a href="../Home.html"align="left" >Home |</a>
+		<input type="text" name="search" placeholder="Search.." size="13" >  <a href="login.html">  | <img src="../images/home/login.png" width="20px" height="20px"> Login |</a> <img src="../images/home/cart.png" width="20px" height="20px"><a href=""> Cart </a>
+	</form>	
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href ="categories.html">Saree</a>
+				<ul>
+					<li><a>Wedding Wear</a></li>
+					<li><a>Bridal Wear</a></li>
+					<li><a>Festive Wear</a></li>
+					<li><a>Casual Wear</a></li>
+				</ul>
+			<li><a href ="Jewellery.html">Jewellery</a>
+				<ul>
+					<li><a >Earrings</a></li>
+					<li><a>Necklaces</a></li>
+					<li><a>Bangles & Sets</a></li>
+					<li><a>Rings</a></li>
+					<li><a>Anklets</a></li>
+				</ul>
+			</li>
+			<li><a>Discover</a>
+				<ul>
+					<li><a>New Arrival</a></li>
+					<li><a>Bestsellers</a></li>
+					<li><a>Summer Trends</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+    <div class="column1">
+        <center>  
+        <div class= "Type">
+        
+            <h2>Shop By</h2>
+            <hr>
+         
+			
+			<button class="accordion1">Type</button>
+			<div class="panel">
+				<table onchange ="window.location=this.options[this.selectedIndex].value">
+					<tr>
+						<td><input type="radio" onchange="window.location.replace('Earrings.html')"> Earrings</td>
+					</tr>
+                
+					 <tr>
+						<td><input type="radio" name="type" value="Embroided"> Necklaces</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Sarees"> Bangles</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Chiffon"> Rings</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="type" value="Cotton">Anklets</td>
+					</tr>
+					
+            
+				</table>
+			</div>	
+			<hr> 
+			<button class="accordion1">Occasion</button>
+			<div class="panel1">
+				<table >
+					<tr>
+						<td><input type="radio" name="Occasion" value="Wedding"> Wedding Wear</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Bridal"> Bridal  Wear</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Festive"> Festive Wear</td>
+					</tr>
+						<td><input type="radio" name="Occasion" value="Casual"> Casual Wear</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Party"> Party Sarees</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Occasion" value="Traditional "> Traditional</td>
+					</tr>
+				</table>
+			</div>
+        <hr>
+		<button class="accordion1">Material</button>
+			<div class="panel">
+				<table >
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Gold-paltted</td>
+						
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Silver</td>
+						
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Lead</td>
+					</tr>
+						<td><input type="checkbox" name="color" value=""> Bronze</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="color" value=""> Stoned</td>
+						
+					</tr>
+					
+				</table>
+			</div>
+            <hr> 
+			<button class="accordion1">Size</button>
+			<div class="panel1">
+				<table >
+					<tr>
+						<td><input type="radio" name="Size" value="Extra Small"> Extra Small</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Size" value="Medium"> Medium</td>
+						
+					</tr>
+					<tr>
+						<td><input type="radio" name="Size" value="Large">Large</td>
+					</tr>
+						<td><input type="radio" name="Size" value="Extra Large"> Extra Large</td>
+					</tr>
+					
+				</table>
+			</div>
+<script>
+var acc = document.getElementsByClassName("accordion1");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+            <hr>
+         
+            <h4>Price</h4>
+            <label for ="price range">
+            Slide till appropriate price
+            
+            </label>
+            <br>
+            <br>
+             Low<input type ="range" name="price range" id = "price range" min="0" max="100">High
+       
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        
+        </div>
+        </center> 
+    </div>
+    <div class="column2">
+		<div class="heading">
+                    <h2>Jewelleries Collections</h2>
+                    <p>Everything that's completes the Beauty of a woman</p>
+					<h4>Design, style and pattern would be at the peak of your beauty once you wear these Jewelleries. </h4>
+        
+		<div id="myBtnContainer">
+			<button style="float: left;margin-left:60px; margin-top: 0px;" class="btn active" onclick="filterSelection('all')"> All</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('new Arrivals')"> New Arrivals</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Best Sellers')"> Best Sellers</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Most Viewed')"> Most Viewed</button>
+			<button style="float: left;margin-left:60px; margin-top: 0px;"  class="btn" onclick="filterSelection('Price:Low to High')"> Price:Low to High</button>
+		</div>
+		</div>
+		<div class="product">
+		<!-- Saree Gallery Grid -->
+			
+				<div class="column new Arrivals">
+					<div class="items">
+						<a href="EarringStone.html" class="img"><img src="../images/Earrings/stone1.0.jpg"></a>
+                        <a href="#" class="name">Green Stoned Earrings</a>
+                        <div>Rs 400</div>
+                        <a href="#" class="cart">Add to cart</a>
+						<span>New</span>
+					</div>
+				</div>
+				
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="Kanjivaram1.0.html" class="img"><img src="../images/jewelleryset/set1.0.jpg"></a>
+                        <a href="#" class="name">Dot Kanjivaram Designs </a>
+                        <div>Rs 500</div>
+                        <a href="#" class="cart">Add to cart</a>
+                       	
+					</div>
+				</div>
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/bangles/b1.0.jpg"></a>
+                        <a href="#" class="name">Geeroo Soft Chiffon</a>
+                        <div>Rs 750</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+  
+			    <div class="column new Arrivals">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/ring/r1.1.jpg"></a>
+                        <a href="#" class="name">Rajasthani Style</a>
+                        <div>Rs 900</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        <span>New</span>
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/ring/r2.1.jpg"></a>
+                        <a href="#" class="name">PerfectBlue Cotton Silk</a>
+                        <div>Rs 500</div>
+                        <a href="#" class="cart">Add to cart</a>
+                       
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/jewelleryset/s2.1.jpg"></a>
+                        <a href="#" class="name">Jewellery Set</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Most Viewed">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/anklets/a1.0.jpg"></a>
+                        <a href="#" class="name">Anklets</a>
+                        <div>Rs 400</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Best Sellers">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/necklaces/n2.0.jpg"></a>
+                        <a href="#" class="name">Necklace</a>
+                        <div>Rs 1000</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column new Arrivals">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/Earrings/e2.0.jpg"></a>
+                        <a href="#" class="name">Earring</a>
+                        <div>Rs 750</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/necklaces/heart1.0.jpg"></a>
+                        <a href="#" class="name">Necklaces</a>
+                        <div>Rs 250</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/jewelleryset/s3.0.jpg"></a>
+                        <a href="#" class="name">Jewellery set</a>
+                        <div>Rs 850</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+				<div class="column Price:Low to High">
+					<div class="items">
+						<a href="#" class="img"><img src="../images/bangles/b2.0.jpg"></a>
+                        <a href="#" class="name">Bangles</a>
+                        <div>Rs 900</div>
+                        <a href="#" class="cart">Add to cart</a>
+                        
+					</div>
+				</div>
+
+				
+<!-- END GRID -->
+			
+		</div>
+	</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+ </body>
+</html>

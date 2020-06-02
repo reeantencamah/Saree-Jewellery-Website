@@ -1,0 +1,141 @@
+<html>
+<head>
+	<title> Login</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+	background-image: url("../images/pale.jpg");
+}
+.form1 {border: 5px solid teal;}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 25%;
+    border-radius: 50%;
+}
+
+.logincontainer {
+    padding: 10px;
+	margin-bottom:5px;
+}
+
+span.psw {
+	font-size:15px;
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+
+
+
+.view{
+	position: relative;
+	margin-top:100px;
+	width:500px;
+	height: auto;
+	padding: 25px;
+	border: 1px solid black;
+	top: 50%;
+	left: 50%;
+	border-radius: 4px;
+	box-shadow: 0 5px 25px black;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	background-color: white;
+	z-index : 100;
+	
+}
+
+a:link {color: navy;}
+		a:active {color: lightblue;}
+		a:hover {color: teal ;}
+		a:link {text-decoration: none;}
+
+		
+</style>
+</head>
+<body>
+
+<div class="header">
+	 <form class="search">
+	 <img src="../images/home.png" width="25px" height="25px"> <a href="../home.html"align="left" >Home |</a>
+		<a href="login.html"><img src="../images/login.png" width="20px" height="20px">  Login |</a> <img src="../images/cart.png" width="20px" height="20px"><a href=""> Cart </a>
+	</form>	
+	<br>
+</div>
+
+
+<div class="view">
+	<img src="../images/logo2.png" width="250px" height="170px" style="margin-top:10px;position:absolute">
+	<h2 style="margin-left:220px;margin-top:95px;font-size:25px">Login Form</h2>
+	<hr>
+	<br>
+	<br>
+	<div class="form1">
+	  <div class="imgcontainer">
+		<img src="../images/avatar2.png" alt="Avatar" class="avatar" style="margin-top:40px">
+	  </div>
+
+	  <div class="logincontainer">
+		<label for="uname"><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" name="uname" required>
+
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="psw" required>
+			
+		<button type="submit">Login</button>
+	
+	  </div>
+
+	  <div class="logincontainer" style="background-color:teal">
+		<button type="button" class="cancelbtn"><a href="../home.html">Cancel</a></button>
+		<span class="psw">Forgot <a href="#">password?</a></span>
+	  </div>
+	</div>
+</div>
+</body>
+</html>
